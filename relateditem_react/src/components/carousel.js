@@ -15,7 +15,7 @@ class Carousle extends React.Component {
     }
 
     fetchData(){
-        Axios.get('http://localhost:8080/rodney')
+        Axios.get('http://localhost:8080/getItems')
         .then(({data}) => {
            this.setState({item: data})
         })
@@ -37,6 +37,7 @@ class Carousle extends React.Component {
                     return (
                         <div>
                             <img id="size" src={value.img}/>
+                            {value.item}
                         </div>
                     )
                 })}

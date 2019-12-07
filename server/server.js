@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 
  
-app.get('/rodney', (req, res) => {
+app.get('/getItems', (req, res) => {
     connection.query('SELECT * FROM mando', function (error, results) {
         if (error){
             console.error(error)
