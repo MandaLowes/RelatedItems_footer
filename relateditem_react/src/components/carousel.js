@@ -32,7 +32,7 @@ class Carousle extends React.Component {
         }
         return(
             <div className="slider">
-            <Slider {...settings} className="container">
+            <Slider {...settings} >
                 {Object.entries(this.state.item).map(([key,value],i) => {
                     return (
                         <div>

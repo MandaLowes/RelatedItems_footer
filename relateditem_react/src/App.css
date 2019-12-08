@@ -1,12 +1,22 @@
 .slider {
   position: relative;
-  width: 1100px;
-  height: 178px;
-  left: 200px;
-  top: 400px;
+  width: 775px;
+  height: 211px;
+  left: 350px;
+  top: 300px;
+  
 }
 
 #size{
   height: 200px;
   width: 175px;
+}
+
+.footer{
+  position: absolute;
+  width: 1425px;
+  height: 400px;
+  left: 0px;
+  top: 935px;
+  background-color: #f2f2f2;
 }
