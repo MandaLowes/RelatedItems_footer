@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import Axios from 'axios'
+import {Link , NavLink} from 'react-router-dom'
 
 class Carousle extends React.Component {
     constructor(){
@@ -37,7 +38,7 @@ class Carousle extends React.Component {
                     return (
                         <div>
                             <img id="size" src={value.img}/>
-                            {value.item}
+                            <Link to='/test'> {value.item}</Link>
                         </div>
                     )
                 })}
