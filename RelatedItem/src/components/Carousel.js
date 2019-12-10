@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import Axios from 'axios'
+import {Link , NavLink} from 'react-router-dom'
 
 class Carousle extends React.Component {
     constructor(){
@@ -15,7 +16,7 @@ class Carousle extends React.Component {
     }
 
     fetchData(){
-        Axios.get('http://localhost:8080/rodney')
+        Axios.get('http://localhost:8080/getItems')
         .then(({data}) => {
            this.setState({item: data})
         })
@@ -32,11 +33,12 @@ class Carousle extends React.Component {
         }
         return(
             <div className="slider">
-            <Slider {...settings} className="container">
+            <Slider {...settings} >
                 {Object.entries(this.state.item).map(([key,value],i) => {
                     return (
                         <div>
                             <img id="size" src={value.img}/>
+                            <Link to='/test'> {value.item}</Link>
                         </div>
                     )
                 })}
